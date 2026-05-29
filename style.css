@@ -1,0 +1,111 @@
+body{
+    background-color: #f0e68c;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.cat{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    cursor: pointer;
+    margin: 40px auto;
+    transition: all 0.1s ease;
+}
+
+.cat:hover{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    cursor: pointer;
+    margin: 40px auto;
+    transform: scale(105%);
+}
+
+.cat:active{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    cursor: pointer;
+    margin: 40px auto;
+    transform: rotate(10deg);
+    transform: scale(125%, 75%);
+}
+
+.cat_container{
+    position: relative;
+}
+
+.pat_button{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff00;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.upgrade_button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.upgrade_button:disabled{
+    background-color: #616161;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.orbit_auto_clicks{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    left: 0;
+    bottom: 0%;
+    margin: 0%;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    animation: spin_around_cat 5s linear infinite;
+    transform-origin: center;
+}
+
+.cursor_auto_clicks{
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    margin: 0 auto;
+    scale: -1;
+}
+
+@keyframes spin_around_cat{
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
